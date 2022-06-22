@@ -37,6 +37,8 @@ const Food = ({navigation}) => {
         <Paragraph>Card content</Paragraph>
       </Card.Content>
     </Card>
+    <View style={styles.border}>
+    </View>
       <TouchableOpacity style={styles.btn}>
         <Text
           style={styles.txt}
@@ -141,6 +143,16 @@ const styles = StyleSheet.create({
     width: 323,
     left: 22,
     borderRadius: 7,
+  },
+  border:{
+    width: 362,
+    height: 1,
+    left:12,
+    top:53,
+    borderColor: '#000000',
+    borderWidth:2,
+    borderStyle:'dashed',
+    flexDirection:'row-reverse'
   },
   card:{
    top:33,

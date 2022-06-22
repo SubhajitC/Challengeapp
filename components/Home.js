@@ -30,6 +30,8 @@ const Home = ({ navigation }) => {
         <Paragraph>Card content</Paragraph>
       </Card.Content>
     </Card>
+    <View style={styles.border}>
+    </View>
       <TouchableOpacity style={styles.btn}>
         <Text
           style={styles.txt}
@@ -135,6 +137,16 @@ const styles = StyleSheet.create({
     top:33,
     height:155
    },
+   border:{
+    width: 362,
+    height: 1,
+    left:12,
+    top:53,
+    borderColor: '#000000',
+    borderWidth:2,
+    borderStyle:'dashed',
+    flexDirection:'row-reverse'
+  },
   backArrow:{
     left:350,
     fontSize:17
