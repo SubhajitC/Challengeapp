@@ -1,12 +1,20 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react'
-import { StyleSheet, Text, View, TouchableOpacity, Image,Dimensions, TextInput } from 'react-native';
-import { ScaledSheet } from 'react-native-size-matters';
-import RBSheet from "react-native-raw-bottom-sheet";
+import React, {useState, useCallback, useEffect, useRef} from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Image,
+  Dimensions,
+  TextInput,
+} from 'react-native';
+import {ScaledSheet} from 'react-native-size-matters';
+import RBSheet from 'react-native-raw-bottom-sheet';
 import Iconins from 'react-native-vector-icons/Entypo';
-const { height, width } = Dimensions.get('window')
+import {Card, Button} from 'react-native-paper';
+const {height, width} = Dimensions.get('window');
 
-
-const Food = ({ navigation }) => {
+const Food = ({navigation}) => {
   const refRBSheet = useRef();
   const [number, onChangeNumber] = React.useState(null);
   return (
@@ -17,92 +25,102 @@ const Food = ({ navigation }) => {
           postion: 'absolute',
           top: 11,
           left: 138,
-          fontSize:26,
-          fontWeight:'bold',
-          alignItems:'center',
+          fontSize: 26,
+          fontWeight: 'bold',
+          alignItems: 'center',
         }}>
         Food List
       </Text>
+      <Card styles={styles.card}>
+        <Card.Actions>
+          <Button>Cancel</Button>
+          <Button>Ok</Button>
+        </Card.Actions>
+      </Card>
       <TouchableOpacity style={styles.btn}>
         <Text
           style={styles.txt}
           onPress={() => {
-            refRBSheet.current.open()
+            refRBSheet.current.open();
           }}>
           Final Food item
         </Text>
       </TouchableOpacity>
       <RBSheet
-      ref={refRBSheet}
-      closeOnPressMask={true}
-      height={300}
-      animationType='slide'
-      customStyles={{
-        wrapper: {
-       
-        },
+        ref={refRBSheet}
+        closeOnPressMask={true}
+        height={300}
+        animationType="slide"
+        customStyles={{
+          wrapper: {},
 
-        container: {
-          backgroundColor: '#FFFFFF',
-          borderRadius:22,
-        }
-      }}
-    >
-    <Text style={{
-      color: '#000000',
-      fontSize:13,
-      left:35,
-      top:11,
-      fontWeight:'bold',
-      alignItems:'center',
-    }}>Add Food</Text>
-    <Iconins
-    name="cross"
-    style={styles.backArrow}
-    color="#000000"
-    onPress={() => {
-      navigation.navigate('Home');
-    }}
+          container: {
+            backgroundColor: '#FFFFFF',
+            borderRadius: 22,
+          },
+        }}>
+        <Text
+          style={{
+            color: '#000000',
+            fontSize: 13,
+            left: 35,
+            top: 11,
+            fontWeight: 'bold',
+            alignItems: 'center',
+          }}>
+          Add Food
+        </Text>
+        <Iconins
+          name="cross"
+          style={styles.backArrow}
+          color="#000000"
+          onPress={() => {
+            navigation.navigate('Home');
+          }}
+        />
 
-  />
-
-    <Text  style={{
-      color: '#000000',
-      fontSize:13,
-      left:35,
-      top:37,
-      alignItems:'center',
-    }}>Food name</Text>
-    <TextInput
-    style={styles.input}
-    onChangeText={onChangeNumber}
-    value={number}
-    keyboardType="default"
-  />
-  <Text  style={{
-    color: '#000000',
-    fontSize:13,
-    left:35,
-    top:37,
-    alignItems:'center',
-  }}>Food price</Text>
-  <TextInput
-  style={styles.input}
-  onChangeText={onChangeNumber}
-  value={number}
-  keyboardType="default"
-/>
-    <TouchableOpacity style={styles.rbshett}>
-    <Text
-      style={styles.rbtxt}
-      onPress={() => {
-        refRBSheet.current.open()
-      }}>
-      Add Food item
-    </Text>
-  </TouchableOpacity>
-    </RBSheet>
-
+        <Text
+          style={{
+            color: '#000000',
+            fontSize: 13,
+            left: 35,
+            top: 37,
+            alignItems: 'center',
+          }}>
+          Food name
+        </Text>
+        <TextInput
+          style={styles.input}
+          onChangeText={onChangeNumber}
+          value={number}
+          keyboardType="default"
+        />
+        <Text
+          style={{
+            color: '#000000',
+            fontSize: 13,
+            left: 35,
+            top: 37,
+            alignItems: 'center',
+          }}>
+          Food price
+        </Text>
+        <TextInput
+          style={styles.input}
+          onChangeText={onChangeNumber}
+          value={number}
+          keyboardType="default"
+        />
+        <TouchableOpacity style={styles.rbshett}>
+          <Text
+            style={styles.rbtxt}
+            onPress={() => {
+              refRBSheet.current.open();
+            }}>
+            Add Food item
+          </Text>
+        </TouchableOpacity>
+      </RBSheet>
     </View>
   );
 };
@@ -117,44 +135,44 @@ const styles = StyleSheet.create({
     height: 40,
     margin: 12,
     borderWidth: 1,
-    borderColor:'#B0C4DE',
-    top:36,
-    padding:6,
-    width:323,
-    left:22,
+    borderColor: '#B0C4DE',
+    top: 36,
+    padding: 6,
+    width: 323,
+    left: 22,
     borderRadius: 7,
   },
-  backArrow:{
-    left:350,
-    fontSize:17
+  backArrow: {
+    left: 350,
+    fontSize: 17,
   },
-  foodname:{
-   fontSize:11,
-   left:33,
+  foodname: {
+    fontSize: 11,
+    left: 33,
   },
   rbshett: {
     position: 'absolute',
-    top:248,
-    left:30,
+    top: 248,
+    left: 30,
     backgroundColor: '#32CD32',
     width: 333,
-    paddingLeft:22,
+    paddingLeft: 22,
     height: 44,
     borderRadius: 7,
   },
   rbtxt: {
     position: 'absolute',
     top: 12,
-    left:113,
-    color: '#eee'
-    },
-   btn: {
+    left: 113,
+    color: '#eee',
+  },
+  btn: {
     position: 'absolute',
-    top:688,
+    top: 688,
     left: 30,
     backgroundColor: '#32CD32',
     width: 333,
-    paddingLeft:46,
+    paddingLeft: 46,
     height: 44,
     borderRadius: 7,
   },

@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity, Image,Dimensions, TextInput }
 import { ScaledSheet } from 'react-native-size-matters';
 import RBSheet from "react-native-raw-bottom-sheet";
 import Iconins from 'react-native-vector-icons/Entypo';
+import {Card, Button} from 'react-native-paper';
 const { height, width } = Dimensions.get('window')
 
 
@@ -23,6 +24,12 @@ const Home = ({ navigation }) => {
         }}>
         Food List
       </Text>
+      <Card>
+      <Card.Actions>
+        <Button>Cancel</Button>
+        <Button>Ok</Button>
+      </Card.Actions>
+    </Card>
       <TouchableOpacity style={styles.btn}>
         <Text
           style={styles.txt}
