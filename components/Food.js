@@ -37,15 +37,24 @@ const Food = ({navigation}) => {
         <Paragraph>Card content</Paragraph>
       </Card.Content>
     </Card>
+    <TouchableOpacity style={styles.secondbtn}>
+    <Text
+      style={styles.txt}
+      onPress={() => {
+        refRBSheet.current.open();
+      }}>
+      Add Food item
+    </Text>
+  </TouchableOpacity>
     <View style={styles.border}>
     </View>
       <TouchableOpacity style={styles.btn}>
         <Text
-          style={styles.txt}
+          style={styles.addtxt}
           onPress={() => {
             refRBSheet.current.open();
           }}>
-          Final Food item
+          Add Food item
         </Text>
       </TouchableOpacity>
       <RBSheet
@@ -145,14 +154,13 @@ const styles = StyleSheet.create({
     borderRadius: 7,
   },
   border:{
-    width: 362,
+    width: 333,
     height: 1,
-    left:12,
+    left:27,
     top:53,
     borderColor: '#000000',
     borderWidth:2,
     borderStyle:'dashed',
-    flexDirection:'row-reverse'
   },
   card:{
    top:33,
@@ -192,15 +200,34 @@ const styles = StyleSheet.create({
     height: 44,
     borderRadius: 7,
   },
+  secondbtn: {
+    position: 'absolute',
+    top: 266,
+    left: 22,
+    borderWidth: 1,
+    borderColor: '#32CD32',
+    backgroundColor: '#cdf7cd',
+    width: 348,
+    paddingLeft: 46,
+    height: 44,
+    borderRadius: 7,
+  },
   text: {
     position: 'absolute',
     top: 11,
   },
   txt: {
     top: 11,
+    left: 3,
+    color: '#000000',
+    fontWeight:'bold'
+  },
+  addtxt: {
+    top: 11,
     left: 77,
     color: '#FFFFFF',
   },
+  
   tinyLogo: {
     position: 'absolute',
     top: -110,
