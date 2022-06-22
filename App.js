@@ -1,112 +1,86 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import React, { useState, useCallback, useEffect, useRef } from 'react'
+import { StyleSheet, Text, View, TouchableOpacity, Image,Dimensions } from 'react-native';
+import { ScaledSheet } from 'react-native-size-matters';
+const { height, width } = Dimensions.get('window')
 
-import React from 'react';
-import type {Node} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
+const Splashscreen2 = ({ navigation }) => {
+  const refRBSheet = useRef();
   return (
-    <View style={styles.sectionContainer}>
+    <View styles={styles.container}>
+      <Image style={styles.tinyLogo} source={require('../assets/img/3.png')} />
       <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
+        style={{
+          color: '#000000',
+          postion: 'absolute',
+          top: 427,
+          left: 133,
+          fontSize: 16,
+        }}>
+        Chat with Drala Community
       </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
+      <TouchableOpacity style={styles.btn}>
+        <Text
+          style={styles.txt}
+          onPress={() => {
+            refRBSheet.current.open()
+          }}>
+          Next
+        </Text>
+      </TouchableOpacity>
+      <RBSheet
+        ref={refRBSheet}
+        closeOnPressMask={true}
+        height={300}
+        animationType='slide'
+        customStyles={{
+          wrapper: {
+            backgroundColor: 'transparent',
           },
-        ]}>
-        {children}
-      </Text>
+
+          container: {
+            backgroundColor: '#FFFFFF',
+
+
+          }
+        }}
+      >
+      </RBSheet>
     </View>
   );
 };
 
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-};
+export default Splashscreen2;
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  container: {
+    flex: 1,
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+  btn: {
+    position: 'absolute',
+    top: 533,
+    left: 98,
+    backgroundColor: '#ff8000',
+    width: 210,
+    paddingLeft: 11,
+    height: 44,
+    borderRadius: 7,
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
+  text: {
+    position: 'absolute',
+    top: 11,
   },
-  highlight: {
-    fontWeight: '700',
+  txt: {
+    top: 11,
+    left: 77,
+    color: '#FFFFFF',
+  },
+  tinyLogo: {
+    position: 'absolute',
+    top: -110,
+    left: 59,
+    flex: 1,
+    width: '70%',
+    height: 679,
+    resizeMode: 'contain',
   },
 });
-
-export default App;
