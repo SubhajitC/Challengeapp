@@ -52,7 +52,7 @@ const Food = ({navigation}) => {
           onPress={() => {
             refRBSheet.current.open();
           }}>
-          Add Food item
+          Final Food list
         </Text>
       </TouchableOpacity>
       <RBSheet
