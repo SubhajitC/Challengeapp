@@ -34,8 +34,10 @@ const Food = ({navigation}) => {
       </Text>
       <Card style={styles.card}>
       <Card.Content>
-        <Title>Card title</Title>
-        <Paragraph>Card content</Paragraph>
+       <View style={styles.firstView}>
+       </View>
+       <View style={styles.secondView}>
+       </View>
       </Card.Content>
     </Card>
     <TouchableOpacity style={styles.secondbtn}>
@@ -165,7 +167,7 @@ const styles = StyleSheet.create({
     height: 1,
     left:27,
     top:53,
-    borderColor: '#000000',
+    borderColor: '#B0C4DE',
     borderWidth:2,
     borderStyle:'dashed',
   },
@@ -214,6 +216,42 @@ const styles = StyleSheet.create({
   secondbtn: {
     position: 'absolute',
     top: 266,
+    left: 22,
+    borderWidth: 1,
+    borderColor: '#32CD32',
+    backgroundColor: '#cdf7cd',
+    width: 348,
+    paddingLeft: 46,
+    height: 44,
+    borderRadius: 7,
+  },
+  secondbtn: {
+    position: 'absolute',
+    top: 266,
+    left: 22,
+    borderWidth: 1,
+    borderColor: '#32CD32',
+    backgroundColor: '#cdf7cd',
+    width: 348,
+    paddingLeft: 46,
+    height: 44,
+    borderRadius: 7,
+  },
+  firstView:{
+    position: 'absolute',
+    top: 25,
+    left: 22,
+    borderWidth: 1,
+    borderColor: '#32CD32',
+    backgroundColor: '#cdf7cd',
+    width: 348,
+    paddingLeft: 46,
+    height: 44,
+    borderRadius: 7,
+  },
+  secondView:{
+    position: 'absolute',
+    top: 88,
     left: 22,
     borderWidth: 1,
     borderColor: '#32CD32',

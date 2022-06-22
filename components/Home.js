@@ -34,8 +34,7 @@ const Home = ({navigation}) => {
       </Text>
       <Card style={styles.card}>
       <Card.Content>
-        <Title>Card title</Title>
-        <Paragraph>Card content</Paragraph>
+      
       </Card.Content>
     </Card>
     <TouchableOpacity style={styles.secondbtn}>
@@ -165,7 +164,7 @@ const styles = StyleSheet.create({
     height: 1,
     left:27,
     top:53,
-    borderColor: '#000000',
+    borderColor: '#B0C4DE',
     borderWidth:2,
     borderStyle:'dashed',
   },
