@@ -7,7 +7,6 @@ const Splashscreen2 = ({ navigation }) => {
   const refRBSheet = useRef();
   return (
     <View styles={styles.container}>
-      <Image style={styles.tinyLogo} source={require('../assets/img/3.png')} />
       <Text
         style={{
           color: '#000000',
@@ -16,7 +15,7 @@ const Splashscreen2 = ({ navigation }) => {
           left: 133,
           fontSize: 16,
         }}>
-        Chat with Drala Community
+        Food List
       </Text>
       <TouchableOpacity style={styles.btn}>
         <Text
@@ -27,24 +26,6 @@ const Splashscreen2 = ({ navigation }) => {
           Next
         </Text>
       </TouchableOpacity>
-      <RBSheet
-        ref={refRBSheet}
-        closeOnPressMask={true}
-        height={300}
-        animationType='slide'
-        customStyles={{
-          wrapper: {
-            backgroundColor: 'transparent',
-          },
-
-          container: {
-            backgroundColor: '#FFFFFF',
-
-
-          }
-        }}
-      >
-      </RBSheet>
     </View>
   );
 };
@@ -59,7 +40,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 533,
     left: 98,
-    backgroundColor: '#ff8000',
+    backgroundColor: '#7FFFD4',
     width: 210,
     paddingLeft: 11,
     height: 44,
