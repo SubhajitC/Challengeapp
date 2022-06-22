@@ -25,7 +25,7 @@ const Splashscreen2 = ({ navigation }) => {
           onPress={() => {
             refRBSheet.current.open()
           }}>
-          Add Food item
+          Final Food item
         </Text>
       </TouchableOpacity>
     </View>
