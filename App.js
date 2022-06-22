@@ -36,7 +36,7 @@ const Splashscreen2 = ({ navigation }) => {
       animationType='slide'
       customStyles={{
         wrapper: {
-          backgroundColor: 'transparent',
+       
         },
 
         container: {
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   rbshett: {
     position: 'absolute',
     top:233,
-    left: 30,
+    left:30,
     backgroundColor: '#32CD32',
     width: 333,
     paddingLeft:22,
@@ -77,8 +77,10 @@ const styles = StyleSheet.create({
   },
   rbtxt: {
     position: 'absolute',
-    top: 11,
-  },
+    top: 12,
+    left:113,
+    color: '#eee'
+    },
    btn: {
     position: 'absolute',
     top:688,
