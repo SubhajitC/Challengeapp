@@ -2,7 +2,9 @@ import React, { useState, useCallback, useEffect, useRef } from 'react'
 import { StyleSheet, Text, View, TouchableOpacity, Image,Dimensions, TextInput } from 'react-native';
 import { ScaledSheet } from 'react-native-size-matters';
 import RBSheet from "react-native-raw-bottom-sheet";
+import Iconins from 'react-native-vector-icons/AntDesign';
 const { height, width } = Dimensions.get('window')
+
 
 const Splashscreen2 = ({ props }) => {
   const refRBSheet = useRef();
@@ -53,6 +55,15 @@ const Splashscreen2 = ({ props }) => {
       fontWeight:'bold',
       alignItems:'center',
     }}>Add Food</Text>
+    <Iconins
+    name="arrowleft"
+    style={styles.backArrow}
+    color="#000000"
+    onPress={() => {
+      navigation.goBack();
+    }}
+  />
+
     <Text  style={{
       color: '#000000',
       fontSize:13,
@@ -107,9 +118,13 @@ const styles = StyleSheet.create({
     borderColor:'#B0C4DE',
     top:36,
     padding:6,
-    width:333,
+    width:323,
     left:22,
     borderRadius: 7,
+  },
+  backArrow:{
+    left:350,
+    fontSize:13
   },
   foodname:{
    fontSize:11,
@@ -117,7 +132,7 @@ const styles = StyleSheet.create({
   },
   rbshett: {
     position: 'absolute',
-    top:233,
+    top:248,
     left:30,
     backgroundColor: '#32CD32',
     width: 333,
