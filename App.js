@@ -25,7 +25,7 @@ const Splashscreen2 = ({ navigation }) => {
           onPress={() => {
             refRBSheet.current.open()
           }}>
-          Next
+          Add Food item
         </Text>
       </TouchableOpacity>
     </View>
@@ -41,10 +41,10 @@ const styles = StyleSheet.create({
   btn: {
     position: 'absolute',
     top:688,
-    left: 98,
-    backgroundColor: '#7FFFD4',
-    width: 210,
-    paddingLeft: 11,
+    left: 30,
+    backgroundColor: '#32CD32',
+    width: 333,
+    paddingLeft:46,
     height: 44,
     borderRadius: 7,
   },
