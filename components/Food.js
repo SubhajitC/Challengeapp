@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
   },
   card:{
    top:33,
-   height:122
+   height:155
   },
   backArrow: {
     left: 350,
