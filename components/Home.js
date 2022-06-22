@@ -11,6 +11,7 @@ import {
 import {ScaledSheet} from 'react-native-size-matters';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import Iconins from 'react-native-vector-icons/Entypo';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {Card,Title, Paragraph} from 'react-native-paper';
 const {height, width} = Dimensions.get('window');
 
@@ -41,6 +42,14 @@ const Home = ({navigation}) => {
     <Text
       style={styles.txt}
      >
+     <Icon
+          name="md-add-outline"
+          style={styles.midbackArrow}
+          color="#000000"
+          onPress={() => {
+            navigation.navigate('Home');
+          }}
+        />
       Add Food item
     </Text>
   </TouchableOpacity>
@@ -168,6 +177,10 @@ const styles = StyleSheet.create({
     left: 350,
     fontSize: 17,
   },
+  midbackArrow:{
+    left: 350,
+    fontSize:20,
+  },
   foodname: {
     fontSize: 11,
     left: 33,
@@ -215,10 +228,11 @@ const styles = StyleSheet.create({
     top: 11,
   },
   txt: {
-    top: 11,
-    left: 3,
+    top: 8,
+    left: -33,
     color: '#000000',
-    fontWeight:'bold'
+    fontWeight:'bold',
+    fontSize:15
   },
   addtxt: {
     top: 11,
