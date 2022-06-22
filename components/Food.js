@@ -44,6 +44,7 @@ const Food = ({ navigation }) => {
 
         container: {
           backgroundColor: '#FFFFFF',
+          borderRadius:22,
         }
       }}
     >

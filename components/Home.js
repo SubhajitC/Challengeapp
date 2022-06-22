@@ -44,6 +44,7 @@ const Home = ({ navigation }) => {
 
         container: {
           backgroundColor: '#FFFFFF',
+          borderRadius:22,
         }
       }}
     >
@@ -60,7 +61,7 @@ const Home = ({ navigation }) => {
     style={styles.backArrow}
     color="#000000"
     onPress={() => {
-        navigation.goBack();
+        navigation.goBack('Home');
     }}
 
   />
