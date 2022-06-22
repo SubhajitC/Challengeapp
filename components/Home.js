@@ -12,7 +12,9 @@ import {ScaledSheet} from 'react-native-size-matters';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import Iconins from 'react-native-vector-icons/Entypo';
 import Icon from 'react-native-vector-icons/Ionicons';
-import {Card,Title, Paragraph} from 'react-native-paper';
+import Edit from 'react-native-vector-icons/Foundation';
+import Material from 'react-native-vector-icons/MaterialIcons';
+import {Card, Title, Paragraph} from 'react-native-paper';
 const {height, width} = Dimensions.get('window');
 
 const Home = ({navigation}) => {
@@ -33,39 +35,83 @@ const Home = ({navigation}) => {
         Food List
       </Text>
       <Card style={styles.card}>
-      <Card.Content>
-       <View style={styles.firstView}>
-       <View style={styles.firsthalfView}>
-       <Icon
-          name="md-add-outline"
-          style={styles.Iconone}
-          color="#000000"
-        />
-       </View>
-       </View>
-       <View style={styles.secondView}>
-       <View style={styles.secondhalfView}>
-       </View>
-       </View>
-      </Card.Content>
-    </Card>
-    <TouchableOpacity style={styles.secondbtn}>
-    <Text
-      style={styles.txt}
-     >
-     <Icon
-          name="md-add-outline"
-          style={styles.midbackArrow}
-          color="#000000"
-          onPress={() => {
-            navigation.navigate('Home');
-          }}
-        />
-      Add Food item
-    </Text>
-  </TouchableOpacity>
-    <View style={styles.border}>
-    </View>
+        <Card.Content>
+          <View style={styles.firstView}>
+            <View style={styles.firsthalfView}>
+              <Edit
+                name="pencil"
+                style={{
+                  color: '#000000',
+                  postion: 'absolute',
+                  top: 8,
+                  left: 5,
+                  fontSize: 20,
+                  fontWeight: 'bold',
+                  alignItems: 'center',
+                }}
+                color="#000000"
+              />
+              <Material
+                name="delete-outline"
+                style={{
+                  color: '#000000',
+                  postion: 'absolute',
+                  bottom: 12,
+                  left: 25,
+                  fontSize: 20,
+                  fontWeight: 'bold',
+                  alignItems: 'center',
+                }}
+                color="#000000"
+              />
+            </View>
+          </View>
+          <View style={styles.secondView}>
+            <View style={styles.secondhalfView}>
+              <Edit
+                name="pencil"
+                style={{
+                  color: '#000000',
+                  postion: 'absolute',
+                  top: 8,
+                  left: 5,
+                  fontSize: 20,
+                  fontWeight: 'bold',
+                  alignItems: 'center',
+                }}
+                color="#000000"
+              />
+              <Material
+                name="delete-outline"
+                style={{
+                  color: '#000000',
+                  postion: 'absolute',
+                  bottom: 12,
+                  left: 25,
+                  fontSize: 20,
+                  fontWeight: 'bold',
+                  alignItems: 'center',
+                }}
+                color="#000000"
+              />
+            </View>
+          </View>
+        </Card.Content>
+      </Card>
+      <TouchableOpacity style={styles.secondbtn}>
+        <Text style={styles.txt}>
+          <Icon
+            name="md-add-outline"
+            style={styles.midbackArrow}
+            color="#000000"
+            onPress={() => {
+              navigation.navigate('Home');
+            }}
+          />
+          Add Food item
+        </Text>
+      </TouchableOpacity>
+      <View style={styles.border}></View>
       <TouchableOpacity style={styles.btn}>
         <Text
           style={styles.addtxt}
@@ -171,29 +217,26 @@ const styles = StyleSheet.create({
     left: 22,
     borderRadius: 7,
   },
-  border:{
+  border: {
     width: 333,
     height: 1,
-    left:27,
-    top:53,
+    left: 27,
+    top: 53,
     borderColor: '#B0C4DE',
-    borderWidth:2,
-    borderStyle:'dashed',
+    borderWidth: 2,
+    borderStyle: 'dashed',
   },
-  card:{
-   top:33,
-   height:155
+  card: {
+    top: 33,
+    height: 155,
   },
   backArrow: {
     left: 350,
     fontSize: 17,
   },
-  midbackArrow:{
+  midbackArrow: {
     left: 350,
-    fontSize:20,
-  },
-  Iconone:{
-    fontSize:100,
+    fontSize: 20,
   },
   foodname: {
     fontSize: 11,
@@ -249,52 +292,51 @@ const styles = StyleSheet.create({
     height: 44,
     borderRadius: 7,
   },
-  firstView:{
+  firstView: {
     position: 'absolute',
     top: 25,
-    left: 22,
+    left: 23,
     borderWidth: 1,
     borderColor: '#999999',
     backgroundColor: '#f2f2f2',
-    width: 348,
+    width: 310,
     paddingLeft: 46,
     height: 44,
     borderRadius: 7,
   },
-  firsthalfView:{
+  firsthalfView: {
     position: 'absolute',
     top: -1,
-    left:270,
+    left: 299,
     borderWidth: 1,
     borderColor: '#999999',
     backgroundColor: '#f2f2f2',
-    width: 77,
-    paddingLeft: 46,
-    height: 44,
-    borderRadius: 7,
-    flexDirection:'row'
-  },
-  secondView:{
-    position: 'absolute',
-    top: 88,
-    left: 22,
-    borderWidth: 1,
-    borderColor: '#999999',
-    backgroundColor: '#f2f2f2',
-    width: 348,
-    paddingLeft: 46,
+    width: 50,
+    paddingright: 7,
     height: 44,
     borderRadius: 7,
   },
-  secondhalfView:{
+  secondView: {
     position: 'absolute',
-    bottom:-1,
-    left:270,
+    top:88,
+    left: 23,
     borderWidth: 1,
     borderColor: '#999999',
     backgroundColor: '#f2f2f2',
-    width:77,
+    width: 310,
     paddingLeft: 46,
+    height: 44,
+    borderRadius: 7,
+  },
+  secondhalfView: {
+    position: 'absolute',
+    top: -1,
+    left: 299,
+    borderWidth: 1,
+    borderColor: '#999999',
+    backgroundColor: '#f2f2f2',
+    width: 50,
+    paddingright: 7,
     height: 44,
     borderRadius: 7,
   },
@@ -306,15 +348,15 @@ const styles = StyleSheet.create({
     top: 8,
     left: -33,
     color: '#000000',
-    fontWeight:'bold',
-    fontSize:15
+    fontWeight: 'bold',
+    fontSize: 15,
   },
   addtxt: {
     top: 11,
     left: 77,
     color: '#FFFFFF',
   },
-  
+
   tinyLogo: {
     position: 'absolute',
     top: -110,
