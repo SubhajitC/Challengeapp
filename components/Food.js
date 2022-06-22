@@ -12,6 +12,8 @@ import {ScaledSheet} from 'react-native-size-matters';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import Iconins from 'react-native-vector-icons/Entypo';
 import Icon from 'react-native-vector-icons/Ionicons';
+import Edit from 'react-native-vector-icons/Foundation';
+import Material from 'react-native-vector-icons/MaterialIcons';
 import {Card,Title, Paragraph} from 'react-native-paper';
 const {height, width} = Dimensions.get('window');
 
@@ -35,8 +37,32 @@ const Food = ({navigation}) => {
       <Card style={styles.card}>
       <Card.Content>
        <View style={styles.firstView}>
-       <View style={styles.firsthalfView}>
-       </View>
+       <Edit
+       name="pencil"
+       style={{
+        color: '#000000',
+        postion: 'absolute',
+        top:8,
+        left: 255,
+        fontSize: 20,
+        fontWeight: 'bold',
+        alignItems: 'center',
+      }}
+       color="#000000"
+     />
+     <Material
+     name="delete-outline"
+     style={{
+      color: '#000000',
+      postion: 'absolute',
+      bottom:12,
+      left: 277,
+      fontSize: 20,
+      fontWeight: 'bold',
+      alignItems: 'center',
+    }}
+     color="#000000"
+   />
        </View>
        <View style={styles.secondView}>
        <View style={styles.secondhalfView}>
