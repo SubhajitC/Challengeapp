@@ -60,8 +60,9 @@ const Splashscreen2 = ({ navigation }) => {
     style={styles.backArrow}
     color="#000000"
     onPress={() => {
-      navigation.goBack();
+      navigation.navigate('Food');
     }}
+
   />
 
     <Text  style={{
@@ -124,7 +125,7 @@ const styles = StyleSheet.create({
   },
   backArrow:{
     left:350,
-    fontSize:13
+    fontSize:17
   },
   foodname:{
    fontSize:11,

@@ -1,15 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react';
-import Food from '../Challengeapp/components/Food'
+import RootStackScreen from './components/Rootstackscreen';
+import {NavigationContainer} from '@react-navigation/native';
 
-const App = ({props}) => {
+const App = () => {
   return (
-    <View>
-      <Food/>
-    </View>
-  )
-}
+    <NavigationContainer>
+      <RootStackScreen />
+    </NavigationContainer>
 
-export default App
+  );
+};
 
-const styles = StyleSheet.create({})
+export default App;

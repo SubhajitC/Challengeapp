@@ -1,14 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React from 'react';
+import {createStackNavigator} from '@react-navigation/stack';
+import Food from './Food';
 
-const Rootstackscreen = () => {
+const RootStack = createStackNavigator();
+
+const Rootstackscreen = ({navigation}) => {
   return (
-    <View>
-      <Text>Rootstackscreen</Text>
-    </View>
-  )
-}
+    <RootStack.Navigator screenOptions={{ headerShown: false }}>
+      <RootStack.Screen name="Food" component={Food}/>
+    </RootStack.Navigator>
+  );
+};
 
-export default Rootstackscreen
-
-const styles = StyleSheet.create({})
+export default Rootstackscreen;
