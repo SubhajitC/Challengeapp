@@ -6,7 +6,7 @@ import Iconins from 'react-native-vector-icons/Entypo';
 const { height, width } = Dimensions.get('window')
 
 
-const Food = ({ navigation }) => {
+const Home = ({ navigation }) => {
   const refRBSheet = useRef();
   const [number, onChangeNumber] = React.useState(null);
   return (
@@ -60,7 +60,7 @@ const Food = ({ navigation }) => {
     style={styles.backArrow}
     color="#000000"
     onPress={() => {
-      navigation.navigate('Home');
+        navigation.goBack();
     }}
 
   />
@@ -106,7 +106,7 @@ const Food = ({ navigation }) => {
   );
 };
 
-export default Food;
+export default Home;
 
 const styles = StyleSheet.create({
   container: {
