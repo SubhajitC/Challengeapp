@@ -44,6 +44,15 @@ const Splashscreen2 = ({ navigation }) => {
         }
       }}
     >
+    <TouchableOpacity style={styles.rbshett}>
+    <Text
+      style={styles.rbtxt}
+      onPress={() => {
+        refRBSheet.current.open()
+      }}>
+      Add Food item
+    </Text>
+  </TouchableOpacity>
     </RBSheet>
 
     </View>
@@ -56,7 +65,21 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  btn: {
+  rbshett: {
+    position: 'absolute',
+    top:233,
+    left: 30,
+    backgroundColor: '#32CD32',
+    width: 333,
+    paddingLeft:22,
+    height: 44,
+    borderRadius: 7,
+  },
+  rbtxt: {
+    position: 'absolute',
+    top: 11,
+  },
+   btn: {
     position: 'absolute',
     top:688,
     left: 30,
