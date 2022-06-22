@@ -40,9 +40,7 @@ const Home = ({navigation}) => {
     <TouchableOpacity style={styles.secondbtn}>
     <Text
       style={styles.txt}
-      onPress={() => {
-        refRBSheet.current.open();
-      }}>
+     >
       Add Food item
     </Text>
   </TouchableOpacity>
