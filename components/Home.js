@@ -34,9 +34,17 @@ const Home = ({navigation}) => {
         }}>
         Food List
       </Text>
+    
       <Card style={styles.card}>
         <Card.Content>
+       
           <View style={styles.firstView}>
+          <Text style={{
+            color: '#000000',
+            left:99,
+            top:5,
+            fontSize:22
+          }}>Price:₹</Text>
             <View style={styles.firsthalfView}>
               <Edit
                 name="pencil"
@@ -67,6 +75,12 @@ const Home = ({navigation}) => {
             </View>
           </View>
           <View style={styles.secondView}>
+          <Text style={{
+            color: '#000000',
+            left:99,
+            top:5,
+            fontSize:22
+          }}>Price:₹</Text>
             <View style={styles.secondhalfView}>
               <Edit
                 name="pencil"
