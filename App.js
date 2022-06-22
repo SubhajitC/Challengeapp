@@ -11,9 +11,11 @@ const Splashscreen2 = ({ navigation }) => {
         style={{
           color: '#000000',
           postion: 'absolute',
-          top: 427,
-          left: 133,
-          fontSize: 16,
+          top: 11,
+          left: 138,
+          fontSize:26,
+          fontWeight:'bold',
+          alignItems:'center',
         }}>
         Food List
       </Text>
@@ -38,7 +40,7 @@ const styles = StyleSheet.create({
   },
   btn: {
     position: 'absolute',
-    top: 533,
+    top:688,
     left: 98,
     backgroundColor: '#7FFFD4',
     width: 210,
