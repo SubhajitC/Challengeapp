@@ -1,11 +1,12 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react'
-import { StyleSheet, Text, View, TouchableOpacity, Image,Dimensions } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image,Dimensions, TextInput } from 'react-native';
 import { ScaledSheet } from 'react-native-size-matters';
 import RBSheet from "react-native-raw-bottom-sheet";
 const { height, width } = Dimensions.get('window')
 
 const Splashscreen2 = ({ navigation }) => {
   const refRBSheet = useRef();
+  const [number, onChangeNumber] = React.useState(null);
   return (
     <View styles={styles.container}>
       <Text
@@ -44,6 +45,20 @@ const Splashscreen2 = ({ navigation }) => {
         }
       }}
     >
+    <Text  style={{
+      color: '#000000',
+      fontSize:13,
+      left:45,
+      top:23,
+      alignItems:'center',
+    }}>Food name</Text>
+    <TextInput
+    style={styles.input}
+    onChangeText={onChangeNumber}
+    value={number}
+    placeholder="useless placeholder"
+    keyboardType="default"
+  />
     <TouchableOpacity style={styles.rbshett}>
     <Text
       style={styles.rbtxt}
@@ -64,6 +79,21 @@ export default Splashscreen2;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    top:36,
+    padding:6,
+    width:333,
+    left:22,
+    borderRadius: 7,
+
+  },
+  foodname:{
+   fontSize:11,
+   left:33,
   },
   rbshett: {
     position: 'absolute',
