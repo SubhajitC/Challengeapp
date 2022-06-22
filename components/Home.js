@@ -36,6 +36,11 @@ const Home = ({navigation}) => {
       <Card.Content>
        <View style={styles.firstView}>
        <View style={styles.firsthalfView}>
+       <Icon
+          name="md-add-outline"
+          style={styles.Iconone}
+          color="#000000"
+        />
        </View>
        </View>
        <View style={styles.secondView}>
@@ -187,6 +192,9 @@ const styles = StyleSheet.create({
     left: 350,
     fontSize:20,
   },
+  Iconone:{
+    fontSize:100,
+  },
   foodname: {
     fontSize: 11,
     left: 33,
@@ -247,7 +255,7 @@ const styles = StyleSheet.create({
     left: 22,
     borderWidth: 1,
     borderColor: '#999999',
-    backgroundColor: '#B0C4DE',
+    backgroundColor: '#f2f2f2',
     width: 348,
     paddingLeft: 46,
     height: 44,
@@ -259,11 +267,12 @@ const styles = StyleSheet.create({
     left:270,
     borderWidth: 1,
     borderColor: '#999999',
-    backgroundColor: '#B0C4DE',
+    backgroundColor: '#f2f2f2',
     width: 77,
     paddingLeft: 46,
     height: 44,
     borderRadius: 7,
+    flexDirection:'row'
   },
   secondView:{
     position: 'absolute',
@@ -271,7 +280,7 @@ const styles = StyleSheet.create({
     left: 22,
     borderWidth: 1,
     borderColor: '#999999',
-    backgroundColor: '#B0C4DE',
+    backgroundColor: '#f2f2f2',
     width: 348,
     paddingLeft: 46,
     height: 44,
@@ -283,7 +292,7 @@ const styles = StyleSheet.create({
     left:270,
     borderWidth: 1,
     borderColor: '#999999',
-    backgroundColor: '#B0C4DE',
+    backgroundColor: '#f2f2f2',
     width:77,
     paddingLeft: 46,
     height: 44,
