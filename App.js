@@ -45,20 +45,40 @@ const Splashscreen2 = ({ navigation }) => {
         }
       }}
     >
+    <Text style={{
+      color: '#000000',
+      fontSize:13,
+      left:35,
+      top:11,
+      fontWeight:'bold',
+      alignItems:'center',
+    }}>Add Food</Text>
     <Text  style={{
       color: '#000000',
       fontSize:13,
-      left:45,
-      top:23,
+      left:35,
+      top:37,
       alignItems:'center',
     }}>Food name</Text>
     <TextInput
     style={styles.input}
     onChangeText={onChangeNumber}
     value={number}
-    placeholder="useless placeholder"
     keyboardType="default"
   />
+  <Text  style={{
+    color: '#000000',
+    fontSize:13,
+    left:35,
+    top:37,
+    alignItems:'center',
+  }}>Food price</Text>
+  <TextInput
+  style={styles.input}
+  onChangeText={onChangeNumber}
+  value={number}
+  keyboardType="default"
+/>
     <TouchableOpacity style={styles.rbshett}>
     <Text
       style={styles.rbtxt}
@@ -84,12 +104,12 @@ const styles = StyleSheet.create({
     height: 40,
     margin: 12,
     borderWidth: 1,
+    borderColor:'#B0C4DE',
     top:36,
     padding:6,
     width:333,
     left:22,
     borderRadius: 7,
-
   },
   foodname:{
    fontSize:11,
