@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react'
 import { StyleSheet, Text, View, TouchableOpacity, Image,Dimensions } from 'react-native';
 import { ScaledSheet } from 'react-native-size-matters';
+import RBSheet from "react-native-raw-bottom-sheet";
 const { height, width } = Dimensions.get('window')
 
 const Splashscreen2 = ({ navigation }) => {
@@ -28,6 +29,23 @@ const Splashscreen2 = ({ navigation }) => {
           Final Food item
         </Text>
       </TouchableOpacity>
+      <RBSheet
+      ref={refRBSheet}
+      closeOnPressMask={true}
+      height={300}
+      animationType='slide'
+      customStyles={{
+        wrapper: {
+          backgroundColor: 'transparent',
+        },
+
+        container: {
+          backgroundColor: '#FFFFFF',
+        }
+      }}
+    >
+    </RBSheet>
+
     </View>
   );
 };
