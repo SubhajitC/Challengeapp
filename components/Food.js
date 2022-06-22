@@ -2,11 +2,11 @@ import React, { useState, useCallback, useEffect, useRef } from 'react'
 import { StyleSheet, Text, View, TouchableOpacity, Image,Dimensions, TextInput } from 'react-native';
 import { ScaledSheet } from 'react-native-size-matters';
 import RBSheet from "react-native-raw-bottom-sheet";
-import Iconins from 'react-native-vector-icons/AntDesign';
+import Iconins from 'react-native-vector-icons/Entypo';
 const { height, width } = Dimensions.get('window')
 
 
-const Splashscreen2 = ({ props }) => {
+const Splashscreen2 = ({ navigation }) => {
   const refRBSheet = useRef();
   const [number, onChangeNumber] = React.useState(null);
   return (
@@ -56,7 +56,7 @@ const Splashscreen2 = ({ props }) => {
       alignItems:'center',
     }}>Add Food</Text>
     <Iconins
-    name="arrowleft"
+    name="cross"
     style={styles.backArrow}
     color="#000000"
     onPress={() => {
