@@ -35,8 +35,12 @@ const Home = ({navigation}) => {
       <Card style={styles.card}>
       <Card.Content>
        <View style={styles.firstView}>
+       <View style={styles.firsthalfView}>
+       </View>
        </View>
        <View style={styles.secondView}>
+       <View style={styles.secondhalfView}>
+       </View>
        </View>
       </Card.Content>
     </Card>
@@ -242,9 +246,21 @@ const styles = StyleSheet.create({
     top: 25,
     left: 22,
     borderWidth: 1,
-    borderColor: '#32CD32',
-    backgroundColor: '#cdf7cd',
+    borderColor: '#999999',
+    backgroundColor: '#B0C4DE',
     width: 348,
+    paddingLeft: 46,
+    height: 44,
+    borderRadius: 7,
+  },
+  firsthalfView:{
+    position: 'absolute',
+    top: -1,
+    left:270,
+    borderWidth: 1,
+    borderColor: '#999999',
+    backgroundColor: '#B0C4DE',
+    width: 77,
     paddingLeft: 46,
     height: 44,
     borderRadius: 7,
@@ -254,9 +270,21 @@ const styles = StyleSheet.create({
     top: 88,
     left: 22,
     borderWidth: 1,
-    borderColor: '#32CD32',
-    backgroundColor: '#cdf7cd',
+    borderColor: '#999999',
+    backgroundColor: '#B0C4DE',
     width: 348,
+    paddingLeft: 46,
+    height: 44,
+    borderRadius: 7,
+  },
+  secondhalfView:{
+    position: 'absolute',
+    bottom:-1,
+    left:270,
+    borderWidth: 1,
+    borderColor: '#999999',
+    backgroundColor: '#B0C4DE',
+    width:77,
     paddingLeft: 46,
     height: 44,
     borderRadius: 7,
