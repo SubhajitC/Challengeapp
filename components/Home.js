@@ -20,6 +20,7 @@ const {height, width} = Dimensions.get('window');
 const Home = ({navigation}) => {
   const refRBSheet = useRef();
   const [number, onChangeNumber] = React.useState(null);
+  const [text, onTextNumber] = React.useState(null);
   return (
     <View styles={styles.container}>
       <Text
