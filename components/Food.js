@@ -37,11 +37,24 @@ const Food = ({navigation}) => {
       <Card style={styles.card}>
         <Card.Content>
           <View style={styles.firstView}>
+          <Material
+          name="drag-indicator"
+          style={{
+            color: '#000000',
+            postion: 'absolute',
+            top:7,
+            left: -33,
+            fontSize: 27,
+            fontWeight: 'bold',
+            alignItems: 'center',
+          }}
+          color="#000000"
+        />
           <Text style={{
             color: '#000000',
             left:99,
-            top:5,
-            fontSize:22
+            top:-20,
+            fontSize:20
           }}>Price:₹</Text>
             <View style={styles.firsthalfView}>
               <Edit
@@ -50,7 +63,7 @@ const Food = ({navigation}) => {
                   color: '#000000',
                   postion: 'absolute',
                   top: 8,
-                  left:17,
+                  left:18,
                   fontSize: 20,
                   fontWeight: 'bold',
                   alignItems: 'center',
@@ -73,11 +86,24 @@ const Food = ({navigation}) => {
             </View>
           </View>
           <View style={styles.secondView}>
+          <Material
+          name="drag-indicator"
+          style={{
+            color: '#000000',
+            postion: 'absolute',
+            top:7,
+            left: -33,
+            fontSize: 27,
+            fontWeight: 'bold',
+            alignItems: 'center',
+          }}
+          color="#000000"
+        />
           <Text style={{
             color: '#000000',
             left:99,
-            top:5,
-            fontSize:22
+            top:-20,
+            fontSize:18
           }}>Price:₹</Text>
             <View style={styles.secondhalfView}>
               <Edit
